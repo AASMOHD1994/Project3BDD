@@ -1,0 +1,4 @@
+StepDefinitions\RegisterTest.class
+Runner\TestRunner.class
+Runner\TestRunner2.class
+StepDefinitions\RegisterTest2.class
