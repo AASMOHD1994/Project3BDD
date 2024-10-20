@@ -1,7 +1,12 @@
 package StepDefinitions;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import Pages.DI;
 import Pages.RegisterPage;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,9 +24,16 @@ public class RegisterTest {
 	
 
 @Given("I want to write a step with precondition")
-public void i_want_to_write_a_step_with_precondition() {
+public void i_want_to_write_a_step_with_precondition(DataTable data) {
 	
 	di.setData("Test", 5);
+	
+	List<List<String>> l=data.asLists(String.class);
+	for(List<String> h:l)
+	{
+		
+		System.out.println(h);
+	}
  
 //	rp.t1();
 }
